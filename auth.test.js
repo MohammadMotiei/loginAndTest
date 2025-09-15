@@ -3,7 +3,7 @@ const { AuthManager } = require('./auth');
 describe('AuthManager', () => {
     let authManager;
   
-    // نمونه کاربر برای تست
+    //manager test
     const testUser = {
       id: '123',
       firstName: 'John',
@@ -16,15 +16,15 @@ describe('AuthManager', () => {
     };
   
     beforeEach(() => {
-      // ایجاد یک نمونه جدید قبل از هر تست
+      // nemone jadid ghable test 
       authManager = new AuthManager();
       
-      // پاک کردن localStorage قبل از هر تست
+      
       localStorage.clear();
     });
   
     afterEach(() => {
-      // پاک کردن localStorage بعد از هر تست
+      
       localStorage.clear();
     });
   
@@ -144,7 +144,7 @@ describe('AuthManager', () => {
   
       test('should validate age requirement', () => {
         const recentDate = new Date();
-        recentDate.setFullYear(recentDate.getFullYear() - 10); // 10 سال پیش
+        recentDate.setFullYear(recentDate.getFullYear() - 10); 
   
         const errors = authManager.validateSignupData({
           firstName: 'John',
